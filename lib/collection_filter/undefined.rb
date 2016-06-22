@@ -4,15 +4,17 @@ module CollectionFilter
       undef_method(m) unless m =~ /(^__|^nil\?$|^send$|^object_id$)/
     end
 
-    def initialize(collection, condition)
-      @collection = collection
-      @condition = condition
+    def self.filter_with(collection, block)
+      new(collection, block)
     end
 
-    def <<(an_object)
-      if @condition.call(an_object)
-        super
-      end
+    def initialize(collection, block)
+      @collection = collection
+      @condition = block
+    end
+
+    def <<(object)
+      filter_for(object).add(object, @collection)
     end
 
     def respond_to?(selector, include_private=false)
@@ -20,6 +22,14 @@ module CollectionFilter
     end
 
     private
+
+    def filter_for(object)
+      filters_provider.find_filter(object, @condition)
+    end
+
+    def filters_provider
+      CollectionFilter::Base
+    end
 
     def method_missing(selector, *args, &block)
       @collection.send(selector, *args, &block)
