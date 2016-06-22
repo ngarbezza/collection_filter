@@ -1,5 +1,4 @@
-require "collection_filter/version"
+require 'collection_filter/version'
 
 module CollectionFilter
-  # Your code goes here...
 end

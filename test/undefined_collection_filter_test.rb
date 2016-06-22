@@ -1,8 +1,8 @@
 require_relative 'test_helper'
 
-require 'undefined_collection_filter'
+require 'collection_filter/undefined_collection_filter'
 
-class FilteredArrayTest < Minitest::Test
+class UndefinedCollectionFilterTest < Minitest::Test
   def test_it_does_not_add_an_element_that_should_be_filtered
     condition = ->(element) { element.even? }
     array = UndefinedCollectionFilter.new(Array.new, condition)
