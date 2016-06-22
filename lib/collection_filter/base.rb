@@ -1,3 +1,5 @@
+require 'error_handling_protocol'
+
 module CollectionFilter
   class Base
     def self.find_filter(object, block)
@@ -13,7 +15,7 @@ module CollectionFilter
     end
 
     def self.can_filter?(object, block)
-      fail NotImplementedError, 'subclass responsibility'
+      subclass_responsibility
     end
   end
 end
