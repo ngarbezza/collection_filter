@@ -7,8 +7,8 @@ class FilteredArray < Array
     @condition = condition
   end
 
-  def <<(element)
-    if @condition.call(element)
+  def <<(an_object)
+    if @condition.call(an_object)
       super
     end
   end
