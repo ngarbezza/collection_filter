@@ -4,6 +4,7 @@ require 'collection_filter/base'
 require 'collection_filter/open'
 require 'collection_filter/closed'
 
-module CollectionFilter
+require 'collection_filter/core_ext/array'
 
+module CollectionFilter
 end
