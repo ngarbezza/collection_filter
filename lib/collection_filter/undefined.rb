@@ -1,9 +1,5 @@
 module CollectionFilter
-  class Undefined
-    instance_methods.each do |m|
-      undef_method(m) unless m =~ /(^__|^nil\?$|^send$|^object_id$)/
-    end
-
+  class Undefined < BasicObject
     def self.filter_with(collection, block)
       new(collection, block)
     end
@@ -28,7 +24,7 @@ module CollectionFilter
     end
 
     def filters_provider
-      CollectionFilter::Base
+      Base
     end
 
     def method_missing(selector, *args, &block)
