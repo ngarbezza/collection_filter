@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = 'collection_filter'
   spec.version       = CollectionFilter::VERSION
   spec.authors       = ['Nahuel Garbezza']
-  spec.email         = ['nahuel@10pines.com']
+  spec.email         = ['n.garbezza@gmail.com']
 
   spec.summary       = %q{Filter objects for collections}
   spec.description   = %q{Filter objects for collections}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/ngarbezza/collection_filter"
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -27,9 +27,9 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.11'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'minitest', '~> 5.0'
-  spec.add_development_dependency 'minitest-reporters', '>= 0.5.0'
+  spec.add_development_dependency 'bundler', '~> 2.1.2'
+  spec.add_development_dependency 'rake', '~> 12.3.3'
+  spec.add_development_dependency 'minitest', '~> 5.14.0'
+  spec.add_development_dependency 'minitest-reporters', '~> 1.4.2'
   spec.add_development_dependency 'error_handling_protocol', '~> 0.0.1'
 end
