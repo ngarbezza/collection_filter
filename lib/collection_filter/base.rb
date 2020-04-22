@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'error_handling_protocol'
 
 module CollectionFilter
@@ -14,7 +16,7 @@ module CollectionFilter
       [CollectionFilter::Open, CollectionFilter::Closed]
     end
 
-    def self.can_filter?(object, block)
+    def self.can_filter?(_object, _block)
       subclass_responsibility
     end
   end

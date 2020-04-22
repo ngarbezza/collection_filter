@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CollectionFilter
   class Open < Base
     def self.can_filter?(object, block)

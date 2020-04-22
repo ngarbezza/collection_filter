@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'collection_filter/undefined'
 
 class Array
