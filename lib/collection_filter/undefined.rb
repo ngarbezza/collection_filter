@@ -13,6 +13,7 @@ module CollectionFilter
 
     def <<(object)
       filter_for(object).add(object, @collection)
+      self
     end
 
     private
@@ -30,7 +31,7 @@ module CollectionFilter
     end
 
     def respond_to_missing?(selector, include_private = false)
-      @collection.respond_to_missing?(selector, include_private) || super
+      @collection.send(:respond_to_missing?, selector, include_private) || super
     end
   end
 end

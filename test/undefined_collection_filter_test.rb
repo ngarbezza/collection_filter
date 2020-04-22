@@ -28,6 +28,13 @@ class UndefinedCollectionFilterTest < Minitest::Test
     assert_equal 0, array.method(:size).call
   end
 
+  def test_the_result_of_addition_message_is_the_collection_in_any_case
+    array = array_filtering_even_numbers
+
+    assert_empty array << 3
+    refute_empty array << 2
+  end
+
   def array_filtering_even_numbers
     filtering_condition = ->(element) { element.even? }
     Array.filter_with(filtering_condition)
