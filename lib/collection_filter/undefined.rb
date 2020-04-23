@@ -12,11 +12,19 @@ module CollectionFilter
     end
 
     def <<(object)
-      filter_for(object).add(object, @collection)
-      self
+      add(object)
+    end
+
+    def push(object)
+      add(object)
     end
 
     private
+
+    def add(object)
+      filter_for(object).add(object, @collection)
+      self
+    end
 
     def filter_for(object)
       filters_provider.find_filter(object, @condition)

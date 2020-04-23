@@ -35,6 +35,16 @@ class UndefinedCollectionFilterTest < Minitest::Test
     refute_empty array << 2
   end
 
+  def test_push_message_is_under_filter
+    array = array_filtering_even_numbers
+
+    array.push(3)
+    assert_empty array
+    array.push(2)
+    assert_equal 1, array.size
+    assert array.include?(2)
+  end
+
   def array_filtering_even_numbers
     filtering_condition = ->(element) { element.even? }
     Array.filter_with(filtering_condition)
