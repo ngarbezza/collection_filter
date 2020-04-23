@@ -16,7 +16,15 @@ module CollectionFilter
       [CollectionFilter::Open, CollectionFilter::Closed]
     end
 
-    def self.can_filter?(_object, _block)
+    def self.can_filter?(_object, _condition)
+      subclass_responsibility
+    end
+
+    def add_first(_object, _condition)
+      subclass_responsibility
+    end
+
+    def add_last(_object, _collection)
       subclass_responsibility
     end
   end

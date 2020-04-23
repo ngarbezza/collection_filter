@@ -12,17 +12,26 @@ module CollectionFilter
     end
 
     def <<(object)
-      add(object)
+      add_last(object)
     end
 
     def push(object)
-      add(object)
+      add_last(object)
+    end
+
+    def unshift(object)
+      add_first(object)
     end
 
     private
 
-    def add(object)
-      filter_for(object).add(object, @collection)
+    def add_first(object)
+      filter_for(object).add_first(object, @collection)
+      self
+    end
+
+    def add_last(object)
+      filter_for(object).add_last(object, @collection)
       self
     end
 
