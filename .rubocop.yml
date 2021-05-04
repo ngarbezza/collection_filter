@@ -1,12 +1,20 @@
 inherit_from: .rubocop_todo.yml
 
+require:
+  - rubocop-rake
+  - rubocop-minitest
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
+
 Style/Documentation:
   Enabled: false
 
 Style/GuardClause:
   Enabled: false
 
-Style/MethodMissingSuper:
+Lint/MissingSuper:
   Enabled: false
 
 Layout/LineLength:

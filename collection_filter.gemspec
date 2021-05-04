@@ -27,11 +27,14 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+  spec.required_ruby_version = '>= 2.7'
 
-  spec.add_development_dependency 'bundler', '~> 2.1.2'
+  spec.add_development_dependency 'bundler', '~> 2.2.16'
   spec.add_development_dependency 'error_handling_protocol', '~> 0.0.1'
-  spec.add_development_dependency 'minitest', '~> 5.14.0'
-  spec.add_development_dependency 'minitest-reporters', '~> 1.4.2'
-  spec.add_development_dependency 'rake', '~> 12.3.3'
-  spec.add_development_dependency 'rubocop', '~> 0.82'
+  spec.add_development_dependency 'minitest', '~> 5.14'
+  spec.add_development_dependency 'minitest-reporters', '~> 1.4'
+  spec.add_development_dependency 'rake', '~> 13.0'
+  spec.add_development_dependency 'rubocop', '~> 1.13'
+  spec.add_development_dependency 'rubocop-minitest', '~> 0.12'
+  spec.add_development_dependency 'rubocop-rake', '~> 0.5'
 end

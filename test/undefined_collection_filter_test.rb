@@ -8,7 +8,7 @@ class UndefinedCollectionFilterTest < Minitest::Test
 
     array << 3
 
-    assert array.empty?
+    assert_empty array
   end
 
   def test_it_adds_an_element_that_should_not_be_filtered
@@ -17,7 +17,7 @@ class UndefinedCollectionFilterTest < Minitest::Test
     array << 12
 
     assert_equal 1, array.size
-    assert array.include?(12)
+    assert_includes array, 12
   end
 
   # this is to ensure respond_to_missing? is defined correctly
@@ -52,7 +52,7 @@ class UndefinedCollectionFilterTest < Minitest::Test
     assert_empty array
     array.push(2)
     assert_equal 1, array.size
-    assert array.include?(2)
+    assert_includes array, 2
   end
 
   def test_push_message_adds_to_the_end
@@ -72,7 +72,7 @@ class UndefinedCollectionFilterTest < Minitest::Test
     assert_empty array
     array.unshift(2)
     assert_equal 1, array.size
-    assert array.include?(2)
+    assert_includes array, 2
   end
 
   def test_unshift_message_adds_to_the_beginning
