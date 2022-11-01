@@ -12,7 +12,7 @@ GEM
     error_handling_protocol (0.0.1)
     json (2.6.2)
     minitest (5.14.0)
-    minitest-reporters (1.4.2)
+    minitest-reporters (1.5.0)
       ansi
       builder
       minitest (>= 5.0)
