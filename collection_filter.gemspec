@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.required_ruby_version = '>= 2.7'
 
-  spec.add_development_dependency 'bundler', '~> 2.2.16'
+  spec.add_development_dependency 'bundler', '~> 2.4.5'
   spec.add_development_dependency 'error_handling_protocol', '~> 0.0.1'
   spec.add_development_dependency 'minitest', '~> 5.14'
   spec.add_development_dependency 'minitest-reporters', '~> 1.4'
@@ -37,4 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop', '~> 1.13'
   spec.add_development_dependency 'rubocop-minitest', '~> 0.12'
   spec.add_development_dependency 'rubocop-rake', '~> 0.5'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
