@@ -43,8 +43,8 @@ module CollectionFilter
       Base
     end
 
-    def method_missing(selector, *args, &block)
-      @collection.send(selector, *args, &block)
+    def method_missing(selector, *args, &)
+      @collection.send(selector, *args, &)
     end
 
     def respond_to_missing?(selector, include_private = false)
