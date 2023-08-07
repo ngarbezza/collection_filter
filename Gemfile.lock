@@ -7,7 +7,7 @@ GEM
     error_handling_protocol (0.0.1)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
-    minitest (5.18.1)
+    minitest (5.19.0)
     minitest-reporters (1.6.1)
       ansi
       builder
@@ -47,7 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   error_handling_protocol (~> 0.0.1)
-  minitest (~> 5.18)
+  minitest (~> 5.19)
   minitest-reporters (~> 1.6.1)
   rake (~> 13.0)
   rubocop (~> 1.54)
