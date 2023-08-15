@@ -6,6 +6,8 @@ require 'collection_filter'
 
 require 'minitest/autorun'
 
-require 'minitest/reporters'
+unless ENV['RM_INFO']
+  require 'minitest/reporters'
 
-MiniTest::Reporters.use!
+  Minitest::Reporters.use!
+end
